@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.hero {
+  background: linear-gradient(
+    to right,
+    black,
+    blue,
+    black,
+    blue,
+    black,
+    blue,
+    black,
+    blue,
+    black,
+    blue
+  );
+  position: absolute;
+  display: block;
+  height: 4000px;
+  width: 20000px;
+  left: 0;
+  right: 0;
+
+  animation: infinity 2s linear 5s 1 forwards;
+  animation-timing-function: ease-out;
+}
+svg {
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  animation: traiectorie 1s linear 4s forwards;
+}
+
+#mainfire,
+#sidefire {
+  opacity: 1;
+  animation: exhaustion 2s ease 0s 2 alternate-reverse none;
+}
+
+@keyframes exhaustion {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes traiectorie {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes infinity {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-18600px);
+  }
+}
